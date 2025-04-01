@@ -17,6 +17,7 @@
      --topaz: #26C2AE;
      --beetle-green:#547878;
      --regent-grey: #7F9D9F;
+     --water-leaf: #9FE8DF;
  }
  
  body{
@@ -120,8 +121,13 @@
             background: var(--sherpa-blue);
             padding: 4rem 2.4rem 2.4rem;
             border-radius: 1.5rem;
+
+
         
             div{
+
+                .amount,
+                .total{
                 display:flex;
                 justify-content: space-between;
                 margin-bottom: 2rem;
@@ -155,3 +161,54 @@
                 border-radius: .5rem;
             }
         }
+    }
+ 
+    input::-webkit-inner-spin-button,
+    input::-webkit-outer-spin-button{
+        display: none;
+    }
+    
+    @media(min-width: 920px){
+        main{
+            max-width: 92rem;
+            display: flex;
+            margin-inline: auto;
+            border-radius: 2.5rem;
+            padding: 4.8rem;
+            gap: 4.8rem;
+        }
+    
+        section{
+            width: 100%;
+        }
+    
+        .info{
+            .tip{
+                div{
+                    grid-template-columns: repeat(3, 1fr);
+    
+                    button:hover{
+                        background: var(--water-leaf);
+                        cursor:pointer;
+                        transition: .4s;
+                    }
+                }
+            }
+        }
+    
+        .results{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+    
+            strong{
+                font-size: 4.8rem;
+            }
+    
+            button:hover{
+                background: var(--water-leaf);
+                cursor: pointer;
+                transition: .4s;
+            }
+        }
+    }
